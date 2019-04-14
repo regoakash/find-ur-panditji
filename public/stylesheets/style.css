@@ -1,8 +1,21 @@
-body {
+/* body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+} */
+/* fonts styles for registration form */
+.registration-font {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: unset;
+  font-weight: 501;
+}
+
+/* fonts styles for registration form */
+.login-font {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: unset;
+  font-weight: 501;
 }

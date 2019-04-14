@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    .container
+        h1 Login
+        .row
+            .form-group.col-md-12
+                form.form-horizontal.login-font
+                    .form-group.row.col-md-4
+                        label.control-label Email or User name:
+                        input.form-control(type='text', name='uname', placeholder:'Enter your email or username')
+                    
+                    form-group.row.col-md-4
+                        label.control-label Password:
+                        input.form-control(type='password', name='password', placeholder:'Enter your password')
+                    
+                    form-group.row.col-md-6
+                        button.btn.btn-success.btn-md(type='submit',name='submit') Login
