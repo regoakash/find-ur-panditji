@@ -5,7 +5,7 @@ block content
         h1 Register here
         .row
             .form-group.col-md-12
-                form.form-horizontal.registration-font(style='bg-color: magenta;')
+                form.form-horizontal.registration-font
                     .row.form-group.col-md-8
                         label.control-label.col-form-label.col-sm-5 Enter your name:
                         .row
@@ -30,6 +30,10 @@ block content
                         label.control-label.col-form-label.col-sm-5 Confirm your password:
                         input.form-control(name='password2', type='password')
                     
+                    .row.form-group.col-md-4
+                        label.control-label.col-form-label.col-sm-5 Date of birth:
+                        input.form-control(name='dob', type='date')
+
                     .row.form-group.col-md-8
                         label.control-label.col-form-label.col-sm-5 Contact no:
                         input.form-control(name='contact', type='text', placeholder='Enter your contact no')

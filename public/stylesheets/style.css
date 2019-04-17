@@ -19,3 +19,54 @@ a {
   font-style: unset;
   font-weight: 501;
 }
+
+/* font styles for billing form */
+.billing-font {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: unset;
+    font-weight: 501;
+}
+
+.nav-style {
+  background-color: #cddff2 ;
+  
+}
+
+contact-style h1{
+
+  margin-top: 142px;
+}
+contact-style span{
+  font-weight: bold;
+  
+}
+
+/* copied stylessss */
+/* choose_box{ display: inline-block; vertical-align: top; width: 22%; margin: 0 1%; border: 2px solid #e5e5e5; border-radius: 5px;}
+.choose_box .img_box{ background: #f1f1f1; padding: 20px 0; text-align: center; border-radius: 5px 5px 0 0;}
+.choose_box .img_box img{ width: 150px}
+.choose_box .img_box strong{ width: 150px; height: 150px; border-radius: 50%; background: #F57133; display: inline-block; vertical-align: top; text-align:center;}
+.choose_box .img_box strong span{ color: #fff; background: none; display: inline-block; line-height: 140px; font-size: 60px;}
+.choose_box .img_box i{ font-size: 80px; line-height: 80px; color: #f57133;}
+.choose_box .descriptions{ padding: 20px 5%; text-align: center; min-height: 145px;}
+.choose_box h3{ color: #F57133; font-size: 22px; line-height: 25px; padding: 0 0 10px;}
+.choose_box p{ font-size: 15px; line-height: 22px; color: #555;} */
+
+
+/* for image boxex/labels */
+div.polaroid {
+  /* width: 80%; */
+  width: min-content;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img { 
+  /* width: 100%; */
+  width: auto;
+}
+
+div.img-container {
+  text-align: center;
+  padding: 10px 20px;
+}
