@@ -23,6 +23,8 @@
     "multer": "*",
     "passport": "*",
     "passport-http": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "body-parser": "*",
+    "serve-favicon": "*"
   }
 }

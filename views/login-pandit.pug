@@ -5,7 +5,7 @@ block content
         h1 Login
         .row
             .form-group.col-md-12
-                form.form-horizontal.login-font
+                form.form-horizontal.login-font(method='post', action='/users/login')
                     .form-group.row.col-md-4
                         label.control-label Email or User name:
                         input.form-control(type='text', name='uname', placeholder='Enter your email or username' ,required='required')
@@ -15,4 +15,4 @@ block content
                         input.form-control(type='password', name='password', placeholder='Enter your password', required='required')
                     
                     form-group.row.col-md-6
-                        button.btn.btn-success.btn-md(type='submit',name='submit') Login
+                        input.btn.btn-success.btn-md(type='submit',name='submit', value='Login') 

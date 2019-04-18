@@ -10,12 +10,12 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var expressValidator = require('express-validator');
 var multer = require('multer');
-// var upload = multer({dest: './uploads'});      for multer(handling image uploads)
+var upload = multer({dest: './uploads'});      //for multer(handling image uploads)
 var flash = require('connect-flash');
 var bcrypt = require('bcryptjs');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-// var db = mongoose.connection;            database variable
+var db = mongoose.connection;            //database variable
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -29,6 +29,9 @@ app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'jade');
 app.set('view engine', 'pug' );     //changing the view engine to 'pug'
 
+//For Handling file uploads
+// app.use(multer({dest: './uploads'}));
+
 app.use((req, res, next) => {     
   var now = new Date().toString();  //getting the current data in the string format
 
@@ -40,7 +43,6 @@ app.use((req, res, next) => {
       console.log('Unable to append to server.log')
     }
   });
-
   //when we do not pass next() then the page will never finish loading because then middleware doesn't call next
   next();
 });
@@ -52,14 +54,51 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Handling sessions
+app.use(session({
+  secret: 'secret',
+  saveUninitialized: true,
+  resave: true
+}));
+
+// Passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+//for express-validator
+app.use(expressValidator({
+  errorFormatter: (param, msg, value) => {
+    var namespace = param.split('.')
+    , root = namespace.shift()
+    , formParam = root;
+    while(namespace.length) {
+      formParam += '[' + namespace.shift() + ']'; 
+    }
+    return {
+      param: formParam,
+      msg: msg,
+      value: value
+    };
+  }
+}));
+
+//for connect-flash
+app.use(require('connect-flash')());
+app.use((req, res, next) => {
+  res.locals.messages = require('express-messages')(req,res);
+  next();
+});
+
+//for showing a common error page for undefined pages while routing
+app.get('*', (req, res, next) => {
+  res.locals.user = req.user || null;
+  // res.render('error');
+  next();
+});
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 // app.use('/page', pageRouter);    adding another routing page
-
-// for showing a common error page for undefined pages while routing
-// app.get('*', function(req, res) {
-//   res.render('error');
-// });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -76,7 +115,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-
 
 module.exports = app;

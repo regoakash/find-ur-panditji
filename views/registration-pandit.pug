@@ -5,18 +5,14 @@ block content
         h1 Register here
         .row
             .form-group.col-md-12
-                form.form-horizontal.registration-font(method='post', action='/users/registration')
+                form.form-horizontal.registration-font(method='post', action='/users/registration-pandit', enctype='multipart/form-data')
                     .row.form-group.col-md-8
                         label.control-label.col-form-label.col-sm-5 Enter your name:
-                        .row
-                            .col
-                                input.form-control(name='fname', type='text', placeholder='First name')
-                            .col
-                                input.form-control(name='lname', type='text',placeholder='Last name')
+                        input.form-control(name='name', type='text', placeholder='Enter your name')
                         
                     .row.form-group.col-md-8
                         label.control-label.col-form-label.col-sm-5 Username:
-                        input.form-control(name='uname', type='text', placeholder='Enter your user name(should contain only letters and numbers)')
+                        input.form-control(name='username', type='text', placeholder='Enter your user name(should contain only letters and numbers)')
 
                     .row.form-group.col-md-8
                         label.control-label.col-form-label.col-sm-5 E-mail address:
@@ -30,13 +26,13 @@ block content
                         label.control-label.col-form-label.col-sm-5 Confirm your password:
                         input.form-control(name='password2', type='password')
                     
-                    .row.form-group.col-md-4
-                        label.control-label.col-form-label.col-sm-5 Date of birth:
-                        input.form-control(name='dob', type='date')
+                    //- .row.form-group.col-md-4
+                    //-     label.control-label.col-form-label.col-sm-5 Date of birth:
+                    //-     input.form-control(name='dob', type='date')
 
                     .row.form-group.col-md-8
                         label.control-label.col-form-label.col-sm-5 Contact no:
-                        input.form-control(name='contact', type='text', placeholder='Enter your contact no')
+                        input.form-control(name='contact_no', type='text', placeholder='Enter your contact no')
                     
                     .row.form-group.col-md-8
                         label.control-label.col-form-label.col-sm-5 Years of experience:
@@ -44,11 +40,11 @@ block content
 
                     .row.form-group.col-md-8
                         label.control-label Upload your photograph:
-                        input.form-control-file(name='upload_file', type='file')
+                        input.form-control-file(name='profile_image', type='file')
 
                     .row.form-group.col-md-8
                         label.control-label Address:
                         textarea.form-control(name='address', rows='3') Enter your address:
                     
                     .row.form-group.col-md-8
-                        button.btn.btn-primary(type='submit', name='submit') Register
+                        input.btn.btn-primary(type='submit', name='submit', value='register')
