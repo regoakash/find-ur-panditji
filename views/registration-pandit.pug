@@ -5,7 +5,7 @@ block content
         h1 Register here
         .row
             .form-group.col-md-12
-                form.form-horizontal.registration-font
+                form.form-horizontal.registration-font(method='post', action='/users/registration')
                     .row.form-group.col-md-8
                         label.control-label.col-form-label.col-sm-5 Enter your name:
                         .row
