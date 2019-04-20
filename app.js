@@ -13,6 +13,7 @@ var multer = require('multer');
 var upload = multer({dest: './uploads'});      //for multer(handling image uploads)
 var flash = require('connect-flash');
 var bcrypt = require('bcryptjs');
+var hbs = require('hbs');   //adding handlebars module
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var db = mongoose.connection;            //database variable
@@ -24,10 +25,13 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
+
 // app.set('views', path.join(__dirname, '.views/gods'));
 // app.set('view engine', 'jade');
-app.set('view engine', 'pug' );     //changing the view engine to 'pug'
+// app.set('view engine', 'pug' );     //changing the view engine to 'pug'
+hbs.registerPartials(__dirname+ '/views/partials');           //registering the partials
+app.set('view engine', 'hbs');
 
 //For Handling file uploads
 // app.use(multer({dest: './uploads'}));

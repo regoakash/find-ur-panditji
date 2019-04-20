@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Billing Page </title>
+    </head>
+    <body>
+        {{> header}}
+        <div class="container">
+            <h1>Billing address</h1>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <form class="form-horizontal billing font">
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Enter your name:
+                           </label> 
+                           <input type="text" class="form-control" name="cust_name" placeholder="Enter your name">
+                        </div>
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               State:
+                           </label> 
+                           <input name="state" class="form-control" type="text" placeholder="Enter your state">
+                        </div>
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Town/City:
+                           </label> 
+                           <input name="city" class="form-control" type="text" placeholder="Enter your town/city">
+                        </div>
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Address:
+                           </label> 
+                           <textarea class="form-control" name="address" rows="3">
+                               House number and street
+                           </textarea>
+                        </div>
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Postal/ZIP:
+                           </label> 
+                           <input name="postal" class="form-control" type="text" placeholder="Postal/ZIP code of your town/city">
+                        </div>
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Mobile no:
+                           </label> 
+                           <input name="contact" class="form-control" type="text" placeholder="Enter your contact no.">
+                        </div>
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Email address:
+                           </label> 
+                           <input name="email" class="form-control" type="email" placeholder="Enter your email address">
+                        </div>
+                        <div class="row form-group col-md-8"> 
+                           <input name="submit" class="btn btn-primary btn-md" type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{> footer}}
+    </body>
+</html>

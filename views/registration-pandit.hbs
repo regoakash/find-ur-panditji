@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Registration </title>
+    </head>
+    <body>
+        {{> header}}
+        <div class="container">
+            <h1>Register here</h1>
+            <p>Please register using this form below</p>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <form class="form-horizontal registration-font">
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Enter your name:
+                           </label> 
+                           <input class="form-control" type="text" name="name" placeholder="Enter your name">
+                        </div>
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Username:
+                           </label> 
+                           <input class="form-control" type="text" name="username" placeholder="Enter your username">
+                        </div>
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Email address:
+                           </label> 
+                           <input class="form-control" name="email" type="email" placeholder="Enter your email address">
+                        </div>
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Password:
+                           </label> 
+                           <input class="form-control" name="password" type="password" placeholder="Must be 8-12 characters long">
+                        </div>
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Confirm your password:
+                           </label> 
+                           <input class="form-control" name="password2" type="password" >
+                        </div>
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Contact no:
+                           </label> 
+                           <input class="form-control" name="contact_no" type="text" placeholder="Enter your contact no">
+                        </div>
+                        
+
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Years of experience:
+                           </label> 
+                           <input class="form-control" name="years_experience" type="text" >
+                        </div>
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Upload your photograph:
+                           </label> 
+                           <input class="form-control" name="profile_image" type="file" >
+                        </div>
+                        <div class="row form-group col-md-8">
+                           <label class="control-label col-form-label col-sm-5">
+                               Address:
+                           </label> 
+                           <textarea class="form-control" name="address" rows="3">
+                               Enter your address:
+                           </textarea>
+                        </div>
+                        <div class="row form-group col-md-8"> 
+                           <input class ="btn btn-primary" name="submit" type="submit" value="Register">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{> footer}}
+    </body>
+</html>

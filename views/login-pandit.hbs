@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login </title>
+    </head>
+    <body>
+        {{> header}}
+        <div class="container">
+            <h1>Login</h1>
+            {{!-- <p>Please register using this form below</p> --}}
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <form class="form-horizontal login-font">
+                       <div class="row form-group col-md-4">
+                           <label class="control-label">
+                               Email or user name:
+                           </label> 
+                           <input name="uname" class="form-control" type="text" placeholder="Enter your email or username" required="required">
+                        </div>
+                        <div class="row form-group col-md-4">
+                           <label class="control-label ">
+                               Password:
+                           </label> 
+                           <input name="password" class="form-control" type="password" placeholder="Enter your password" required="required">
+                        </div>
+                        <div class="row form-group col-md-6"> 
+                           <input name="submit" class="btn btn-success btn-md" type="submit" value="Login">
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{> footer}}
+    </body>
+</html>

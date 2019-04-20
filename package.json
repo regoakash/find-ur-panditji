@@ -25,6 +25,7 @@
     "passport-http": "*",
     "passport-local": "*",
     "body-parser": "*",
-    "serve-favicon": "*"
+    "serve-favicon": "*",
+    "hbs": "*"
   }
 }
