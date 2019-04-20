@@ -3,6 +3,11 @@ extends layout
 block content
     .container
         h1 Register here
+        p Please register using the form below
+
+            if errors
+                each error, i in errors
+                    div.alert.alert-danger #{error.msg}
         .row
             .form-group.col-md-12
                 form.form-horizontal.registration-font(method='post', action='/users/registration-pandit', enctype='multipart/form-data')

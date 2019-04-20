@@ -2,9 +2,18 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', ensureAuthenticated, (req, res, next) => {
+  res.render('index', { title: 'Bookings' });
 });
+
+function ensureAuthenticated(req, res, next) {
+  if(req.isAuthenticated()) {
+    return next();
+  }
+  res.redirect('/users/home-page');
+}
+
+module.exports = router;
 
 //for the gods/shiv  page
 // router.get('/shiv', (req, res, next) => {
@@ -26,4 +35,3 @@ router.get('/', function(req, res, next) {
 //   res.render('saraswati', {title: 'Saraswati Ji'});
 // });
 
-module.exports = router;

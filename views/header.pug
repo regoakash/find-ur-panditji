@@ -1,6 +1,7 @@
 doctype html
+html(lang='en')
 head
-    title Header
+    title Welcome
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap.css')
 body
@@ -12,18 +13,12 @@ body
         .collapse.navbar-collapse#navbarSupportedContent
             ul.navbar-nav.mr-auto
                 li.new-item-active
-                    a.nav-link(href='./users/home-page') Home 
+                    a.nav-link(href='/users/home-page') Home 
                         span.sr-only (current)
 
                 li.nav-item
-                    a.nav-link(href='./users/book-puja') Book Puja
+                    a.nav-link(href='/users/book-puja') Book Puja
 
-                li.nav-item.dropdown
-                    a.nav-link.dropdown-toggle#navbarDropdown(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') PanditJi
-                    .dropdown-menu(aria-labelledby='navbarDropdown')
-                        a.dropdown-item(href='./users/pandit-in-bhopal') Panditji in Bhopal
-                        a.dropdown-item(href='./users/modal') Panditji in Indore
-                
                 li.nav-item.dropdown
                     a.nav-link.dropdown-toggle#navbarDropdown(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Gods
                     .dropdown-menu(aria-labelledby='navbarDropdown')
@@ -34,22 +29,29 @@ body
                         a.dropdown-item(href='./users/ganesh') Ganesh ji
                         a.dropdown-item(href='./users/saraswati') Saraswati ji
                         a.dropdown-item(href='./users/bhoomi-puja') Bhoomi ji
+            ul.navbar-nav.mr-auto
+                if user
+                    li.nav-item(class=(title == 'Bookings' ? 'active' : ''))
+                        a.nav-link(href='#') Bookings
 
-                li.nav-item
-                    a.nav-link(href='./users/registration-pandit') Register
+                if !user
+                    li.nav-item(class=(title == 'Register' ? 'active' : ''))
+                        a.nav-link(href='/users/registration-pandit') Register
 
-                li.nav-item
-                    a.nav-link(href='/users/login-pandit') Login
-
-                li.nav-item
-                    a.nav-link(href='/users/billing-form') Billing Page
+                    li.nav-item(class=(title == 'Login' ? 'active' : ''))
+                        a.nav-link(href='/users/login-pandit') Login
 
                 li.nav-item
                     a.nav-link(href='/users/contact-us') Contact us
 
-                    //- li.nav-item 
-                    //-   a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled
-                    
-            form.form-inline.my-2.my-lg-0
-                input.form-control.mr-sm-2(type='search', placeholder='Search' aria-label='Search')
-                button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+            ul.nav.navbar-nav.navbar-right
+                if user
+                    li-nav-item
+                        a.nav-link(href='/users/logout') Logout
+                        
+        //- .container
+        != messages
+    
+    block content
+    script(src='/javascrip/jquery-3.3.1.min.js')
+    script(src='/javascrip/boostrap.js')

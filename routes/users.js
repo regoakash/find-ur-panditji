@@ -181,8 +181,15 @@ router.get('/book-puja', (req, res, next) => {
   res.render('book-puja', {title: 'Book Puja'});
 });
 
+//for the separate pujas pages
 router.get('/bhoomi-puja', (req, res, next) => {
   res.render('bhoomi-puja', {title: 'Bhoomi Puja'});
+});
+router.get('/annaprashan', (req, res, next) => {
+  res.render('annaprashan', {title: 'Annaprashan Puja'});
+});
+router.get('/gauri-puja', (req, res, next) => {
+  res.render('gauri-puja', {title: 'Gauri Puja'});
 });
 
 // //for showing a common error page for undefined pages while routing
