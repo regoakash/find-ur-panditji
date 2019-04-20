@@ -22,6 +22,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 // var pageRouter = require('./routes/pages');
 
+// const port = process.env.PORT || 3000;  //making a port variable
+
 var app = express();
 
 // view engine setup
