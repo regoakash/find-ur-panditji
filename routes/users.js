@@ -196,6 +196,100 @@ router.get('/annaprashan', (req, res, next) => {
 router.get('/gauri-puja', (req, res, next) => {
   res.render('gauri-puja', {title: 'Gauri Puja'});
 });
+router.get('/mata-ki-chowki', (req, res, next) => {
+  res.render('mata-ki-chowki', {title: 'Mata ki Chowki'});
+});
+router.get('/mahamrityunjaya', (req, res, next) => {
+  res.render('mahamrityunjaya', {title: 'Mahamrityunjaya Puja'});
+});
+router.get('/rudrabhishek', (req, res, next) => {
+  res.render('rudrabhishek', {title: 'Rudrabhishek Puja'});
+});
+router.get('/dhanteras-puja', (req, res, next) => {
+  res.render('dhanteras-puja', {title: 'Dhanteras Puja'});
+});
+router.get('/kaalsarp-puja', (req, res, next) => {
+  res.render('kaalsarp-puja', {title: 'Kaalsarp Puja'});
+});
+router.get('/navratri-puja', (req, res, next) => {
+  res.render('navratri-puja', {title: 'Navratri Puja'});
+});
+router.get('/durga-puja', (req, res, next) => {
+  res.render('durga-puja', {title: 'Durga Puja'});
+});
+router.get('/shiv-puja', (req, res, next) => {
+  res.render('shiv-puja', {title: 'Shiv Puja'});
+});
+router.get('/krishna-puja', (req, res, next) => {
+  res.render('krishna-puja', {title: 'Krishna Puja'});
+});
+router.get('/saraswati-puja', (req, res, next) => {
+  res.render('saraswati-puja', {title: 'Saraswati puja'});
+});
+router.get('/laghu-rudra-puja', (req, res, next) => {
+  res.render('laghu-rudra-puja', {title: 'Laghu Rudra puja'});
+});
+router.get('/hanuman-puja', (req, res, next) => {
+  res.render('hanuman-puja', {title: 'Hanuman puja'});
+});
+router.get('/akhand-ramayan-paath', (req, res, next) => {
+  res.render('akhand-ramayan-paath', {title: 'Akhand Ramayan paath'});
+});
+router.get('/sundarkand-path', (req, res, next) => {
+  res.render('sundarkand-path', {title: 'Sundarkand Path'});
+});
+router.get('/vishnu-sahasranama', (req, res, next) => {
+  res.render('vishnu-sahasranama', {title: 'Vishnu Sahasranama Puja'});
+});
+router.get('/mangal-dosh-nivaran', (req, res, next) => {
+  res.render('mangal-dosh-nivaran', {title: 'Mangal Dosh Nivaran puja'});
+});
+
+router.get('/pitra-dosh-nivaran', (req, res, next) => {
+  res.render('pitra-dosh-nivaran', {title: 'Pitra Dosh nivaran puja'});
+});
+router.get('/shani-dosh-nivaran', (req, res, next) => {
+  res.render('shani-dosh-nivaran', {title: 'Shani Dosh nivaran puja'});
+});
+router.get('/mool-shanti', (req, res, next) => {
+  res.render('mool-shanti', {title: 'Mool Shanti puja'});
+});
+router.get('/mahashivratri-puja', (req, res, next) => {
+  res.render('mahashivratri-puja', {title: 'Mahashivratri puja'});
+});
+router.get('/ganpati-sthapna', (req, res, next) => {
+  res.render('ganpati-sthapna', {title: 'Ganpati Sthapna puja'});
+});
+router.get('/birthday-puja', (req, res, next) => {
+  res.render('birthday-puja', {title: 'Birthday puja'});
+});
+router.get('/mundan-puja', (req, res, next) => {
+  res.render('mundan-puja', {title: 'Mundan puja'});
+});
+router.get('/shradh-puja', (req, res, next) => {
+  res.render('shradh-puja', {title: 'Shradh puja'});
+});
+router.get('/antim-sanskar', (req, res, next) => {
+  res.render('antim-sanskar', {title: 'Antim sanskar'});
+});
+router.get('/satyanarayan-puja', (req, res, next) => {
+  res.render('satyanarayan-puja', {title: 'Satyanarayan puja'});
+});
+router.get('/grih-pravesh-puja', (req, res, next) => {
+  res.render('grih-pravesh-puja', {title: 'Grih Pravesh puja'});
+});
+router.get('/vivah-puja', (req, res, next) => {
+  res.render('vivah-puja', {title: 'Vivah puja'});
+});
+router.get('/ganpati-puja', (req, res, next) => {
+  res.render('ganpati-puja', {title: 'Ganpati puja'});
+});
+router.get('/laxmi-puja', (req, res, next) => {
+  res.render('laxmi-puja', {title: 'Laxmi puja'});
+});
+router.get('/naamkaran-puja', (req, res, next) => {
+  res.render('naamkaran-puja', {title: 'Naamkaran puja'});
+});
 
 // //for showing a common error page for undefined pages while routing
 // app.get('*', function(req, res) {
