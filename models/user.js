@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 
-mongoose.connect('mongodb://localhost/FindUrPanditji', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/FindUrPanditji', {useCreateIndex: true , useNewUrlParser: true });
 
 var db = mongoose.connection;
 

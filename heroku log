@@ -1,0 +1,102 @@
+$ heroku logs --tail
+2019-04-20T22:34:50.404121+00:00 app[api]: Deploy f0704e8d by user hackdevkhomesh@gmail.com
+2019-04-20T22:34:50.415210+00:00 app[api]: Scaled to web@1:Free by user hackdevkhomesh@gmail.com
+2019-04-20T22:34:52.000000+00:00 app[api]: Build succeeded
+2019-04-20T22:34:53.223848+00:00 heroku[web.1]: Starting process with command `npm start`
+2019-04-20T22:34:55.588538+00:00 app[web.1]:
+2019-04-20T22:34:55.588558+00:00 app[web.1]: > find-ur-panditji@0.0.0 start /app
+2019-04-20T22:34:55.588560+00:00 app[web.1]: > node app.js
+2019-04-20T22:34:55.588562+00:00 app[web.1]:
+2019-04-20T22:34:56.640948+00:00 app[web.1]: Warning: connect.session() MemoryStore is not
+2019-04-20T22:34:56.640996+00:00 app[web.1]: designed for a production environment, as it will leak
+2019-04-20T22:34:56.640998+00:00 app[web.1]: memory, and will not scale past a single process.
+2019-04-20T22:34:56.659792+00:00 app[web.1]: (node:23) UnhandledPromiseRejectionWarning: Error: connect ECONNREFUSED 127.0.0.1:27017
+2019-04-20T22:34:56.659795+00:00 app[web.1]: at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1097:14)
+2019-04-20T22:34:56.660075+00:00 app[web.1]: (node:23) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2019-04-20T22:34:56.660191+00:00 app[web.1]: (node:23) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2019-04-20T22:34:56.785761+00:00 heroku[web.1]: State changed from starting to crashed
+2019-04-20T22:34:56.791861+00:00 heroku[web.1]: State changed from crashed to starting
+2019-04-20T22:34:56.763674+00:00 heroku[web.1]: Process exited with status 0
+2019-04-20T22:34:59.031818+00:00 heroku[web.1]: Starting process with command `npm start`
+2019-04-20T22:35:00.987670+00:00 app[web.1]:
+2019-04-20T22:35:00.987697+00:00 app[web.1]: > find-ur-panditji@0.0.0 start /app
+2019-04-20T22:35:00.987699+00:00 app[web.1]: > node app.js
+2019-04-20T22:35:00.987700+00:00 app[web.1]:
+2019-04-20T22:35:01.802853+00:00 app[web.1]: Warning: connect.session() MemoryStore is not
+2019-04-20T22:35:01.802890+00:00 app[web.1]: designed for a production environment, as it will leak
+2019-04-20T22:35:01.802892+00:00 app[web.1]: memory, and will not scale past a single process.
+2019-04-20T22:35:01.817246+00:00 app[web.1]: (node:23) UnhandledPromiseRejectionWarning: Error: connect ECONNREFUSED 127.0.0.1:27017
+2019-04-20T22:35:01.817248+00:00 app[web.1]: at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1097:14)
+2019-04-20T22:35:01.817404+00:00 app[web.1]: (node:23) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2019-04-20T22:35:01.817502+00:00 app[web.1]: (node:23) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2019-04-20T22:35:01.904319+00:00 heroku[web.1]: State changed from starting to crashed
+2019-04-20T22:35:01.884762+00:00 heroku[web.1]: Process exited with status 0
+2019-04-20T22:35:27.059750+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=limitless-coast-60808.herokuapp.com request_id=48f0e600-fcbb-4613-9a10-dcc3c8cd4a43 fwd="1.22.112.161" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-20T22:35:27.599241+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=limitless-coast-60808.herokuapp.com request_id=a8a3e89f-9eb4-4bc9-8f95-70d1fd9d4501 fwd="1.22.112.161" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-20T22:36:36.279393+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=limitless-coast-60808.herokuapp.com request_id=25bc9aba-2f4c-4083-86df-77eccd677343 fwd="1.22.112.161" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-20T22:36:36.599694+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=limitless-coast-60808.herokuapp.com request_id=d69b489d-2408-4e29-903e-e8c09d7b5d7a fwd="1.22.112.161" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-20T22:47:38.000000+00:00 app[api]: Build started by user hackdevkhomesh@gmail.com
+2019-04-20T22:47:54.386020+00:00 heroku[web.1]: State changed from crashed to starting
+2019-04-20T22:47:54.104219+00:00 app[api]: Release v4 created by user hackdevkhomesh@gmail.com
+2019-04-20T22:47:54.104219+00:00 app[api]: Deploy 5e5cb621 by user hackdevkhomesh@gmail.com
+2019-04-20T22:47:57.181804+00:00 heroku[web.1]: Starting process with command `npm start`
+2019-04-20T22:47:57.000000+00:00 app[api]: Build succeeded
+2019-04-20T22:47:59.649311+00:00 heroku[web.1]: State changed from starting to crashed
+2019-04-20T22:47:59.655979+00:00 heroku[web.1]: State changed from crashed to starting
+2019-04-20T22:47:59.406803+00:00 app[web.1]:
+2019-04-20T22:47:59.406826+00:00 app[web.1]: > find-ur-panditji@0.0.0 start /app
+2019-04-20T22:47:59.406828+00:00 app[web.1]: > node ./bin/www
+2019-04-20T22:47:59.406830+00:00 app[web.1]:
+2019-04-20T22:47:59.519120+00:00 app[web.1]: internal/modules/cjs/loader.js:584
+2019-04-20T22:47:59.519124+00:00 app[web.1]: throw err;
+2019-04-20T22:47:59.519126+00:00 app[web.1]: ^
+2019-04-20T22:47:59.519127+00:00 app[web.1]:
+2019-04-20T22:47:59.519129+00:00 app[web.1]: Error: Cannot find module '/app/bin/www'
+2019-04-20T22:47:59.519131+00:00 app[web.1]: at Function.Module._resolveFilename (internal/modules/cjs/loader.js:582:15)
+2019-04-20T22:47:59.519136+00:00 app[web.1]: at Function.Module._load (internal/modules/cjs/loader.js:508:25)
+2019-04-20T22:47:59.519138+00:00 app[web.1]: at Function.Module.runMain (internal/modules/cjs/loader.js:754:12)
+2019-04-20T22:47:59.519140+00:00 app[web.1]: at startup (internal/bootstrap/node.js:283:19)
+2019-04-20T22:47:59.519142+00:00 app[web.1]: at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+2019-04-20T22:47:59.529079+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2019-04-20T22:47:59.529460+00:00 app[web.1]: npm ERR! errno 1
+2019-04-20T22:47:59.530589+00:00 app[web.1]: npm ERR! find-ur-panditji@0.0.0 start: `node ./bin/www`
+2019-04-20T22:47:59.530753+00:00 app[web.1]: npm ERR! Exit status 1
+2019-04-20T22:47:59.531000+00:00 app[web.1]: npm ERR!
+2019-04-20T22:47:59.531172+00:00 app[web.1]: npm ERR! Failed at the find-ur-panditji@0.0.0 start script.
+2019-04-20T22:47:59.531381+00:00 app[web.1]: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2019-04-20T22:47:59.541782+00:00 app[web.1]:
+2019-04-20T22:47:59.542107+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2019-04-20T22:47:59.542343+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2019-04-20T22_47_59_532Z-debug.log
+2019-04-20T22:47:59.632550+00:00 heroku[web.1]: Process exited with status 1
+2019-04-20T22:48:02.577038+00:00 heroku[web.1]: Starting process with command `npm start`
+2019-04-20T22:48:05.791761+00:00 app[web.1]:
+2019-04-20T22:48:05.791781+00:00 app[web.1]: > find-ur-panditji@0.0.0 start /app
+2019-04-20T22:48:05.791783+00:00 app[web.1]: > node ./bin/www
+2019-04-20T22:48:05.791785+00:00 app[web.1]:
+2019-04-20T22:48:05.948937+00:00 app[web.1]: internal/modules/cjs/loader.js:584
+2019-04-20T22:48:05.948941+00:00 app[web.1]: throw err;
+2019-04-20T22:48:05.948943+00:00 app[web.1]: ^
+2019-04-20T22:48:05.948944+00:00 app[web.1]:
+2019-04-20T22:48:05.948949+00:00 app[web.1]: Error: Cannot find module '/app/bin/www'
+2019-04-20T22:48:05.948968+00:00 app[web.1]: at Function.Module._resolveFilename (internal/modules/cjs/loader.js:582:15)
+2019-04-20T22:48:05.948971+00:00 app[web.1]: at Function.Module._load (internal/modules/cjs/loader.js:508:25)
+2019-04-20T22:48:05.948972+00:00 app[web.1]: at Function.Module.runMain (internal/modules/cjs/loader.js:754:12)
+2019-04-20T22:48:05.948973+00:00 app[web.1]: at startup (internal/bootstrap/node.js:283:19)
+2019-04-20T22:48:05.948975+00:00 app[web.1]: at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+2019-04-20T22:48:05.955878+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2019-04-20T22:48:05.956548+00:00 app[web.1]: npm ERR! errno 1
+2019-04-20T22:48:05.958255+00:00 app[web.1]: npm ERR! find-ur-panditji@0.0.0 start: `node ./bin/www`
+2019-04-20T22:48:05.958522+00:00 app[web.1]: npm ERR! Exit status 1
+2019-04-20T22:48:05.958896+00:00 app[web.1]: npm ERR!
+2019-04-20T22:48:05.959217+00:00 app[web.1]: npm ERR! Failed at the find-ur-panditji@0.0.0 start script.
+2019-04-20T22:48:05.959481+00:00 app[web.1]: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2019-04-20T22:48:07.663020+00:00 app[web.1]:
+2019-04-20T22:48:07.675500+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2019-04-20T22:48:07.675806+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2019-04-20T22_48_05_961Z-debug.log
+2019-04-20T22:48:07.792853+00:00 heroku[web.1]: State changed from starting to crashed
+2019-04-20T22:48:07.769741+00:00 heroku[web.1]: Process exited with status 1
+2019-04-20T22:48:23.169799+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=limitless-coast-60808.herokuapp.com request_id=f8c33c9a-b544-48d2-845f-7b8b91776465 fwd="1.22.112.161" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-20T22:48:23.609825+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=limitless-coast-60808.herokuapp.com request_id=c18e8af3-9846-4d7f-bc91-1ed8735c050e fwd="1.22.112.161" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-20T22:51:31.692167+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=limitless-coast-60808.herokuapp.com request_id=b4f1ae51-fa6b-4153-a43e-6e2ceb457568 fwd="1.22.112.161" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-20T22:51:32.121503+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=limitless-coast-60808.herokuapp.com request_id=543363e3-81dd-4053-bba7-55aa240857d2 fwd="1.22.112.161" dyno= connect= service= status=503 bytes= protocol=https
+

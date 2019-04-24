@@ -7,12 +7,13 @@
     </head>
     <body>
         {{> header}}
-        <div class="container">
-            <h1>Register here</h1>
-            <p>Please register using this form below</p>
-            <div class="row">
-                <div class="form-group col-md-12">
-                    <form class="form-horizontal registration-font">
+        <div class="container" >
+            
+            <div class="row" >
+                <div class="form-group col-md-12" style="background-color: #dad0d0; font-family:intial;">
+                    <h1>Register here</h1>
+                    <p>Please register using this form below</p>
+                    <form class="form-horizontal registration-font" method="POST" action="/users/registration-pandit" enctype="multipart/form-data">
                         <div class="row form-group col-md-8">
                            <label class="control-label col-form-label col-sm-5">
                                Enter your name:

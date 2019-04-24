@@ -90,6 +90,7 @@ router.post('/registration-pandit', upload.single('profile_image'), (req, res, n
   req.checkBody('name','Name field is required').notEmpty();
   req.checkBody('username','User name field is required').notEmpty();
   req.checkBody('email','Email field is required').notEmpty();
+  req.checkBody('email','Email is not valid').notEmpty();
   req.checkBody('password','Password field is required').notEmpty();
   req.checkBody('password2','Passwords do not match').equals(req.body.password);
   req.checkBody('contact_no','Contact number field is required').notEmpty();
@@ -149,6 +150,10 @@ router.get('/contact-us', (req, res, next) => {
 //for the 'panditji in bhopal' page
 router.get('/pandit-in-bhopal', (req, res, next) => {
   res.render('pandit-in-bhopal', {title: 'Pandit in Bhopal'});
+});
+//for the 'panditji in indore' page
+router.get('/pandit-in-indore', (req, res, next) => {
+  res.render('pandit-in-indore', {title: 'Pandit in Indore'});
 });
 
 //for the sample 'modal' page

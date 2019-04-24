@@ -95,13 +95,6 @@ app.use((req, res, next) => {
   next();
 });
 
-//for showing a common error page for undefined pages while routing
-app.get('*', (req, res, next) => {
-  res.locals.user = req.user || null;
-  // res.render('error');
-  next();
-});
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 // app.use('/page', pageRouter);    adding another routing page
@@ -109,6 +102,15 @@ app.use('/users', usersRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
+});
+
+//for showing a common error page for undefined pages while routing
+//here '*' is the wildcard character
+app.get('*', (req, res, next) => {
+  res.locals.user = req.user || null;
+  // res.render('error');
+  res.send('My 404 page!!');
+  next();
 });
 
 // error handler

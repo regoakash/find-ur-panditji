@@ -2,13 +2,13 @@
 <head>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/bootstrap.css">
-    <script src="/javascript/bootstrap.js"></script>
-    <script src="/javascript/jquery-3.3.1.min.js"></script>
+    <script src="/javascripts/bootstrap.js"></script>
+    <script src="/javascripts/jquery-3.3.1.min.js"></script>
 </head>
 
 <header>
-   <nav class="navbar navbar-expand-lg navbar-light nav-style">
-        <a class="navbar-brand" href="#">FindUrPanditji</a>
+   <nav class="navbar navbar-expand-lg navbar-light nav-style" style="background-color: #7e7b7b;">
+        <a class="navbar-brand" href="/users/home-page">FindUrPanditji</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,42 +23,54 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Gods
-                </a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  Pandit ji </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./users/shiv">Shiv</a>
-                <a class="dropdown-item" href="./users/laxmi">Laxmi ji</a>
-                <a class="dropdown-item" href="./users/vishnu">Vishnu ji</a>
-                <a class="dropdown-item" href="./users/durga">Durga ji</a>
-                <a class="dropdown-item" href="./users/ganesh">Ganesh ji</a>
-                <a class="dropdown-item" href="./users/saraswati">Saraswati ji</a>
-                <a class="dropdown-item" href="./users/bhoomi-puja">Bhoomi ji</a>
-                {{!-- <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-                </div> --}}
+                    <a class="dropdown-item" href="/users/pandit-in-bhopal">Pandit in Bhopal</a>
+                    <a class="dropdown-item" href="/users/pandit-in-indore">Pandit in Indore</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  Gods </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/users/shiv">Shiv</a>
+                    <a class="dropdown-item" href="/users/laxmi">Laxmi ji</a>
+                    <a class="dropdown-item" href="/users/vishnu">Vishnu ji</a>
+                    <a class="dropdown-item" href="/users/durga">Durga ji</a>
+                    <a class="dropdown-item" href="/users/ganesh">Ganesh ji</a>
+                    <a class="dropdown-item" href="/users/saraswati">Saraswati ji</a>
+                    <a class="dropdown-item" href="/users/bhoomi-puja">Bhoomi ji</a>
+                </div>
             </li>
 
             <li class="nav-item">   
                 <a class="nav-link " href="#">Bookings</a>
             </li>
-            <li class="nav-item">   
-                <a class="nav-link " href="/users/registration-pandit">Register</a>
-            </li>
-            <li class="nav-item">   
-                <a class="nav-link " href="/users/login-pandit">Login</a>
-            </li>
+
+            {{#unless user}}
+                <li class="nav-item">   
+                    <a class="nav-link " href="/users/registration-pandit">Register</a>
+                </li>
+            {{/unless}}
+                <li class="nav-item">   
+                    <a class="nav-link " href="/users/login-pandit">Login</a>
+                </li>
+            
             <li class="nav-item">   
                 <a class="nav-link " href="/users/contact-us">Contact us</a>
             </li>
-            <li class="nav-item">   
-                <a class="nav-link " href="/users/logout">Logout</a>
-            </li>
+
+            {{#if user}} 
+                <li class="nav-item">   
+                    <a class="nav-link " href="/users/logout">Logout</a>
+                </li>
+            {{/if}}
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            
+            {{!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> --}}
         </div>
    </nav>
 </header>
